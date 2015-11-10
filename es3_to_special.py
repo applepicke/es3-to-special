@@ -110,7 +110,7 @@ def gen_points(percs):
 	points = point_templ.copy()
 
 	count = 0
-	while count < 14:
+	while count < 21:
 		point = get_point(percs, total_count)
 
 		if points[point] > 8:
