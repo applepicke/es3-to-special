@@ -132,7 +132,9 @@ def gen_for_class(_class):
 
 		point_values = gen_point_values(data)
 		points = gen_points(point_values)
+
 		points['name'] = data[0]
+		points['classname'] = data[0].lower()
 
 		return points
 

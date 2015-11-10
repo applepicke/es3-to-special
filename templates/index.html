@@ -1,0 +1,198 @@
+<html>
+<head>
+	<link rel="shortcut icon" href="/static/favicon.ico"/>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+	<style>
+
+		body {
+			background: url("/static/images/background.png");
+			background-position: center;
+			background-size: cover;
+		}
+
+		.title {
+			margin: 25px auto;
+			width: 600px;
+			padding: 5px 25px 15px;
+		}
+
+		.class-selector {
+			text-align: center;
+		}
+
+		.class-name {
+			margin-top: 20px;
+			font-size: 25px;
+		}
+
+		.class-name span {
+			color: #bababa;
+		}
+
+		.panel {
+			background: #111;
+			opacity: 0.9;
+			border-radius: 10px;
+		}
+
+		.selector {
+			opacity: 1;
+			position: relative;
+			margin: 50px auto 20px;
+			width: 125px;
+			padding: 10px;
+		}
+
+		.class-display {
+			padding: 20px 50px;
+			margin: 10px auto;
+			width: 800px;
+			height: 275px;
+		}
+
+		.stat {
+			font-size: 22px;
+			float: right;
+			margin-top: -5px;
+		}
+
+		.stats {
+			margin: 20px 100px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		h5 {
+			clear: both;
+			display: block;
+			width: 69px;
+			font-weight: 200;
+			font-size: 17px;
+			margin: 10px;
+		}
+
+		h5 b {
+			min-width: 10px;
+		}
+
+		h1, h2, h3, h4, h5, .stat {
+			color: #efefef;
+		}
+
+		.class-image {
+			margin: 20px 0px;
+			width: 250px;
+			border-radius: 5px;
+		}
+
+		.right {
+			float: right;
+		}
+
+		.left {
+			margin-left: 40px;
+			float: left;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="title panel">
+			<h1>Elder Scrolls III --> Fallout S.P.E.C.I.A.L Converter</h1>
+		</div>
+
+		<div class="selector panel">
+			<div class="btn-group">
+				<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select Class <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#" value="acrobat">Acrobat</a></li>
+					<li><a href="#" value="agent">Agent</a></li>
+					<li><a href="#" value="archer">Archer</a></li>
+					<li><a href="#" value="assassin">Assassin</a></li>
+					<li><a href="#" value="barbarian">Barbarian</a></li>
+					<li><a href="#" value="bard">Bard</a></li>
+					<li><a href="#" value="battlemage">Battlemage</a></li>
+					<li><a href="#" value="crusader">Crusader</a></li>
+					<li><a href="#" value="healer">Healer</a></li>
+					<li><a href="#" value="knight">Knight</a></li>
+					<li><a href="#" value="mage">Mage</a></li>
+					<li><a href="#" value="monk">Monk</a></li>
+					<li><a href="#" value="nightblade">Nightblade</a></li>
+					<li><a href="#" value="pilgrim">Pilgrim</a></li>
+					<li><a href="#" value="rogue">Rogue</a></li>
+					<li><a href="#" value="scout">Scout</a></li>
+					<li><a href="#" value="sorcerer">Sorcerer</a></li>
+					<li><a href="#" value="spellsword">Spellsword</a></li>
+					<li><a href="#" value="thief">Thief</a></li>
+					<li><a href="#" value="warrior">Warrior</a></li>
+					<li><a href="#" value="witchhunter">Witchhunter</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="class-display panel" style="display: none;">
+			<div class="left">
+				<h4 class="class-name">Class: <span></span></h3>
+
+				<img class="class-image" src="" />
+
+			</div>
+
+			<div class="right">
+
+				<div class="stats">
+					<h5><span class="type"><b>S</b>TR:</span><span class="stat str"></span></h5>
+					<h5><span class="type"><b>P</b>ER:</span><span class="stat per"></span></h5>
+					<h5><span class="type"><b>E</b>ND:</span><span class="stat end"></span></h5>
+					<h5><span class="type"><b>C</b>HA:</span><span class="stat cha"></span></h5>
+					<h5><span class="type"><b>I</b>NT:</span><span class="stat int"></span></h5>
+					<h5><span class="type"><b>A</b>GL:</span><span class="stat agl"></span></h5>
+					<h5><span class="type"><b>L</b>UK:</span><span class="stat luk"></span></h5>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	$(function () {
+
+		$('.dropdown-menu a').click(function (e) {
+			var item = $(e.currentTarget);
+
+			$.get('.', {value: item.attr('value')}, function (result) {
+				var data = $.parseJSON(result);
+
+				$('.class-name span').text(data.name);
+				$('.class-image').attr('src', '/static/images/' + data.classname + '.jpg');
+
+				$('.str').text(data.STR);
+				$('.per').text(data.PER);
+				$('.end').text(data.END);
+				$('.cha').text(data.CHA);
+				$('.int').text(data.INT);
+				$('.agl').text(data.AGL);
+				$('.luk').text(data.LUK);
+
+				$('.class-display').show();
+			})
+
+		});
+
+	});
+
+	</script>
+
+</body>
+</html>
